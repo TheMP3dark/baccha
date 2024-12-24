@@ -1,0 +1,25 @@
+<div class="main-container">
+  @if(!showNo) {
+  <div class="prompt-container">
+    <div class="image-container">
+      <img src="img.jpg" alt="" class="image">
+    </div>
+    <div class="heading">
+      Would you like to be my Christmas Present?
+    </div>
+    <div class="button-container">
+      <button (click)="clickYes()">Yes</button>
+      <button (click)="displayNo(); countDownChanged()">No</button>
+    </div>
+  </div>
+  } @else if(showNo) {
+  <div class="ABORT">
+    <div class="heading">
+      WRONG ANSWER
+    </div>
+    <div class="countdown">
+      Self Destructing in {{countDown}}
+    </div>
+  </div>
+  }
+</div>
